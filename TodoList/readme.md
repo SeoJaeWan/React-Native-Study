@@ -11,6 +11,7 @@ counter App에서 props와 state를 사용해서 데이터를 다뤘다.
 ## Context API
 
 그래서 나온게 리액트에서 Flux라는 개념을 도입한 Context API를 제공하였다!
+
 ※ Flux ?? https://www.notion.so/seojaewan/Flux-c8d5709390c745ea80d2f8d3a7f1cd8b
 
 Context는 부모 컴포넌트로부터 자식 컴포넌트로 전달되는 흐름과 상관없이, 전역적으로 사용되는 데이터를 다룬다.
