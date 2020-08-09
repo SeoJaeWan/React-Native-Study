@@ -77,3 +77,25 @@ contentContainerStyle={todoList.length === 0 && {flex: 1}} : 표시할 데이터
 => 이 컴포넌트도 하나의 리스트 아이템으로 표시되기 때문에, 전체화면으로 표시되지 않는다.
 
 => 그래서 length가 0인 경우 flex :1 을 설정
+
+## 찾아본 태그
+
+View : UI 구축을 위한 가장 기본적인 구성 요소 Web에서의 div 태그와 비슷하다.
+
+SafeAreaView : 장치의 안전한 영역(?)에 콘텐츠를 렌더링한다. 예를들어 카메라 노치와 같은 화면!
+View는 안보이는 영역 상관없이 출력하지만 SafeAreaView 는 신경을 써주는 친구!
+
+TouchableOpacity : 터치에 적절하게 반응하도록 만들어진 컴포넌트 
+                   click 이벤트는 onPress 를 통해 사용할 수 있다.
+Button 컴포넌트를 사용하지 않고 TouchableOpacity를 사용하는 EU는 Button 컴포넌트는 안드로이드와 ios에서 다르게 보이기 때문에 관리에 어려움이 있다.
+
+Image : react-native에서 이미지를 보여줄 때 사용하는 컴포넌트이다. 
+        source 속성으로 이미지의 경로를 지정할 수 있다. 
+        
+TouchableWithoutFeedback : 위 배운것에서 나온것처럼 자식 뷰로 구성하게 되면, 키보드가 보여지는 상태에서 빈 공강 또는 자식 뷰를 터치하면 닫히도록 동작한다.
+                           자식 요소는 하나만 가지고 있어야 하며 꼭 필요한 용도가 아니면 사용하지 않는 것을 추천한다고 한단다..(Why???)
+                           
+TextInput : 키보드를 통해 앱에 텍스트를 입력하기 위한 기본 구성 요소 
+            위 Input 란에 TextInput에 대한 정보가 있으니 참고!
+
+Text : 텍스트를 표시하기 위한 컴포넌트!
