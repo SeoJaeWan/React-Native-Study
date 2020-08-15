@@ -11,6 +11,7 @@ counter App에서 props와 state를 사용해서 데이터를 다뤘다.
 ## Context API
 
 그래서 나온게 리액트에서 Flux라는 개념을 도입한 Context API를 제공하였다!
+
 ※ Flux ?? https://www.notion.so/seojaewan/Flux-c8d5709390c745ea80d2f8d3a7f1cd8b
 
 Context는 부모 컴포넌트로부터 자식 컴포넌트로 전달되는 흐름과 상관없이, 전역적으로 사용되는 데이터를 다룬다.
@@ -44,21 +45,57 @@ TouchableWithoutFeedback는 자식 뷰를 1개만 가질 수 있으므로 전체
 ### Input
 
 autoCapitalize : TextInput의 특정 문자를 자동으로 대문자로 표시할 수 있도록 한다.
+
 => characters : 모든 문자, words : 각 단어의 첫 글자, sentences : 각 문장의 첫 글자(가본 값), none : 아무것도 자동으로 대문자화 시키지 않는다.
+
 autoCompleteType : 자동 완성 기능을 제공
+
 autoCorrect : 자동 수정을 비활성화시긴다. 기본값은 true
+
 autoFocus : 입력에 초점을 맞춘다. 기본값은 false
+
 returnKeyType : 리턴 키의 모양을 결정한다.
+
 onSubmitEditing : 키보드의 "완료" 버튼을 눌렀을 시 호출되는 함수
 
 ### FlatList
 
 data : 리스트 뷰에 표시할 데이터의 배열
+
 keyExtractor : 리액트에 반복적으로 동일한 컴포넌트를 표시하기 위해서 키값 설정
+
 => 리액트는 이 킥밧을 보고 컴포넌트를 구별한다.
+
 => react에서 map에서 key를 설정하는 것과 같은 논리라고 생각하면 될듯
+
 ListEmptyComponent : 주어진 배열에 데이터가 없을 경우 표시되는 컴포넌트
+
 renderItem : 주어진 배열에 데이터를 사용하여 반복적으로 표시될 컴포넌트
+
 contentContainerStyle={todoList.length === 0 && {flex: 1}} : 표시할 데이터가 없는 경우, ListEmptyComponent가 출력되는데,
+
 => 이 컴포넌트도 하나의 리스트 아이템으로 표시되기 때문에, 전체화면으로 표시되지 않는다.
+
 => 그래서 length가 0인 경우 flex :1 을 설정
+
+## 찾아본 태그
+
+View : UI 구축을 위한 가장 기본적인 구성 요소 Web에서의 div 태그와 비슷하다.
+
+SafeAreaView : 장치의 안전한 영역(?)에 콘텐츠를 렌더링한다. 예를들어 카메라 노치와 같은 화면!
+View는 안보이는 영역 상관없이 출력하지만 SafeAreaView 는 신경을 써주는 친구!
+
+TouchableOpacity : 터치에 적절하게 반응하도록 만들어진 컴포넌트 
+                   click 이벤트는 onPress 를 통해 사용할 수 있다.
+Button 컴포넌트를 사용하지 않고 TouchableOpacity를 사용하는 EU는 Button 컴포넌트는 안드로이드와 ios에서 다르게 보이기 때문에 관리에 어려움이 있다.
+
+Image : react-native에서 이미지를 보여줄 때 사용하는 컴포넌트이다. 
+        source 속성으로 이미지의 경로를 지정할 수 있다. 
+        
+TouchableWithoutFeedback : 위 배운것에서 나온것처럼 자식 뷰로 구성하게 되면, 키보드가 보여지는 상태에서 빈 공강 또는 자식 뷰를 터치하면 닫히도록 동작한다.
+                           자식 요소는 하나만 가지고 있어야 하며 꼭 필요한 용도가 아니면 사용하지 않는 것을 추천한다고 한단다..(Why???)
+                           
+TextInput : 키보드를 통해 앱에 텍스트를 입력하기 위한 기본 구성 요소 
+            위 Input 란에 TextInput에 대한 정보가 있으니 참고!
+
+Text : 텍스트를 표시하기 위한 컴포넌트!
